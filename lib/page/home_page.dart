@@ -77,7 +77,7 @@ class ProvinceChoose extends StatelessWidget {
 }
 
 class CityChoose extends StatelessWidget {
-  CityChoose({required this.province}) {}
+  CityChoose({required this.province});
 
   @override
   Widget build(BuildContext context) {
@@ -119,6 +119,28 @@ class HomePlaceChooseArea extends StatelessWidget {
   }
 }
 
+class PlanetElementWidget extends StatelessWidget {
+  PlanetElementWidget({required this.city, this.colorValue = 0xFFFFE082}) {}
+
+  final String city;
+  final int colorValue;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: BoxConstraints.tight(Size(30, 30)),
+      child: Column(children: [
+        ClipOval(
+            child: Container(color: Color(colorValue), width: 12, height: 12)),
+        Text(
+          "广州",
+          style: TextStyle(fontSize: 10),
+        )
+      ]),
+    );
+  }
+}
+
 class HomePlanetArea extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -129,37 +151,38 @@ class HomePlanetArea extends StatelessWidget {
       height: 300,
       width: double.infinity,
       child: PlanetWidget(children: [
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
-        Text("广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
+        PlanetElementWidget(city: "广州市"),
       ]),
     );
   }
